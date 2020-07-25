@@ -4,7 +4,6 @@ metadata:
   labels:
     app: postgres
   name: postgres
-  namespace: rebacklogs
 spec:
   ports:
   - name: postgres
@@ -20,7 +19,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: db
-  namespace: rebacklogs
 spec:
   replicas: 1
   selector:
