@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: rebacklogs
+spec:
+  storageClassName: ssd
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 100Gi
