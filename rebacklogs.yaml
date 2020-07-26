@@ -51,8 +51,9 @@ spec:
         - containerPort: 3000
           name: http
         readinessProbe:
-          exec:
-            command: ["/bin/sh", "-c", "wget -q --spider --proxy=off localhost:3000/health || exit 1"]
+          httpGet:
+            path: /health
+            port: 3000
           initialDelaySeconds: 60
           timeoutSeconds: 5
         livenessProbe:
